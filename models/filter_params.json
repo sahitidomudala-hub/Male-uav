@@ -1,0 +1,109 @@
+{
+  "fs_hz": 50.000000000045475,
+  "fit_rows": 37534,
+  "fit_fraction": 0.7,
+  "power_fraction": 0.9999,
+  "min_cutoff_hz": 0.5,
+  "max_cutoff_hz": 5.0,
+  "channels": {
+    "EngTrq": {
+      "type": "butterworth",
+      "cutoff_hz": 3.0395507812527645,
+      "source": "auto"
+    },
+    "RPM": {
+      "type": "median",
+      "window": 5,
+      "source": "fixed"
+    },
+    "MAT": {
+      "type": "butterworth",
+      "cutoff_hz": 2.0629882812518763,
+      "source": "auto"
+    },
+    "MAP": {
+      "type": "butterworth",
+      "cutoff_hz": 1.196289062501088,
+      "source": "auto"
+    },
+    "EGT": {
+      "type": "butterworth",
+      "cutoff_hz": 3.6254882812532974,
+      "source": "auto"
+    },
+    "FuelFlow": {
+      "type": "butterworth",
+      "cutoff_hz": 3.088378906252809,
+      "source": "auto"
+    },
+    "CH": {
+      "type": "butterworth",
+      "cutoff_hz": 0.5,
+      "source": "auto"
+    },
+    "BaroPress": {
+      "type": "median",
+      "window": 5,
+      "source": "fixed"
+    },
+    "TurboSpd": {
+      "type": "butterworth",
+      "cutoff_hz": 1.1230468750010214,
+      "source": "auto"
+    },
+    "TPS": {
+      "type": "median",
+      "window": 5,
+      "source": "fixed"
+    },
+    "OilPress": {
+      "type": "butterworth",
+      "cutoff_hz": 5.0,
+      "source": "auto"
+    },
+    "OilTemp": {
+      "type": "butterworth",
+      "cutoff_hz": 0.5,
+      "source": "auto"
+    },
+    "AltCurrent": {
+      "type": "median",
+      "window": 5,
+      "source": "fixed"
+    },
+    "BusVoltage": {
+      "type": "butterworth",
+      "cutoff_hz": 3.4057617187530975,
+      "source": "auto"
+    },
+    "InjTiming": {
+      "type": "butterworth",
+      "cutoff_hz": 3.088378906252809,
+      "source": "auto"
+    },
+    "Altitude": {
+      "type": "none",
+      "source": "fixed"
+    },
+    "Vib0p5X": {
+      "type": "butterworth",
+      "cutoff_hz": 2.490234375002265,
+      "source": "auto"
+    },
+    "Vib1X": {
+      "type": "butterworth",
+      "cutoff_hz": 4.589843750004174,
+      "source": "auto"
+    },
+    "Vib2X": {
+      "type": "butterworth",
+      "cutoff_hz": 2.490234375002265,
+      "source": "auto"
+    },
+    "VibRMS": {
+      "type": "butterworth",
+      "cutoff_hz": 2.514648437502287,
+      "source": "auto"
+    }
+  }
+}

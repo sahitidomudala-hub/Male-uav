@@ -1,0 +1,56 @@
+{
+  "phase": "Phase 5: Anomaly Detection",
+  "method": "Reconstruction Error Thresholding",
+  "threshold_calculation": {
+    "method": "95.0th percentile of validation errors",
+    "percentile": 95.0,
+    "threshold_value": 0.024914921241281415,
+    "calculated_from": "validation_errors_only",
+    "validation_statistics": {
+      "count": 7994,
+      "min": 8.111148063792527e-05,
+      "max": 0.1168408716121676,
+      "mean": 0.006167277186771948,
+      "median": 0.0009930415238537,
+      "std": 0.011479394960038814,
+      "percentile_25": 0.0003131260265419,
+      "percentile_50": 0.0009930415238537,
+      "percentile_75": 0.008976896379757075,
+      "percentile_90": 0.01805102127356164,
+      "percentile_95": 0.024914921241281415,
+      "percentile_99": 0.0591989127052185
+    }
+  },
+  "classification_results": {
+    "total_test_sequences": 7994,
+    "normal_count": 6764,
+    "anomaly_count": 1230,
+    "normal_percentage": 84.6134600950713,
+    "anomaly_percentage": 15.386539904928698,
+    "test_error_statistics": {
+      "min": 0.0002615295793746,
+      "max": 0.4709797350691568,
+      "mean": 0.011814122388464004,
+      "median": 0.0025683273991298503,
+      "std": 0.02492436288736361
+    }
+  },
+  "data_integrity": {
+    "test_data_used_for_threshold": false,
+    "synthetic_faults_generated": false,
+    "ground_truth_labels_available": false,
+    "model_retrained": false
+  },
+  "interpretation": {
+    "note": "Classifications are based on reconstruction error thresholding, NOT ground-truth labels.",
+    "anomaly_definition": "Sequences with reconstruction error exceeding validation-derived threshold.",
+    "normal_definition": "Sequences with reconstruction error within expected range based on validation data.",
+    "limitation": "Without validated fault labels, detected anomalies require further investigation to confirm actual faults."
+  },
+  "files": {
+    "results": "outputs/anomaly_detection_results.csv",
+    "validation_errors": "outputs/reconstruction_errors_val.csv",
+    "test_errors": "outputs/reconstruction_errors_test.csv",
+    "model": "models/lstm_autoencoder.keras"
+  }
+}

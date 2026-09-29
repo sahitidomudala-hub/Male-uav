@@ -1,0 +1,4 @@
+{"timestamp_start": 924.88, "timestamp_end": 927.32, "sequence_index_range": [666, 739], "anomaly_score": 5.087, "severity": "HIGH", "top_channel": "TPS", "top_channel_deviation": 47.55, "immediate_uplink": true}
+{"timestamp_start": 960.6, "timestamp_end": 963.04, "sequence_index_range": [2452, 2525], "anomaly_score": 3.976, "severity": "HIGH", "top_channel": "EngTrq", "top_channel_deviation": 59.06, "immediate_uplink": true}
+{"timestamp_start": 998.18, "timestamp_end": 1000.86, "sequence_index_range": [4331, 4416], "anomaly_score": 18.904, "severity": "HIGH", "top_channel": "TPS", "top_channel_deviation": 265.49, "immediate_uplink": true}
+{"timestamp_start": 1033.88, "timestamp_end": 1036.46, "sequence_index_range": [6116, 6196], "anomaly_score": 4.059, "severity": "HIGH", "top_channel": "EngTrq", "top_channel_deviation": 59.16, "immediate_uplink": true}

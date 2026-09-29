@@ -1,0 +1,13 @@
+{
+  "point_estimate": 0.024914921241281415,
+  "bootstrap_mean": 0.0250626400892075,
+  "bootstrap_std": 0.0005175369646861362,
+  "ci_95pct_lower": 0.024148032365641062,
+  "ci_95pct_upper": 0.026098315051469072,
+  "n_validation_sequences": 7994,
+  "n_bootstrap_resamples": 2000,
+  "percentile_used": 95.0,
+  "anomaly_rate_at_ci_lower_threshold_pct": 16.61245934450838,
+  "anomaly_rate_at_point_estimate_pct": 15.386539904928698,
+  "anomaly_rate_at_ci_upper_threshold_pct": 14.761070803102328
+}

@@ -1,0 +1,453 @@
+[
+  {
+    "feature_name": "Time",
+    "source_columns": [
+      "Time"
+    ],
+    "calculation": "Direct copy",
+    "window_size": null,
+    "units": "Timestamp",
+    "causal": true,
+    "justification": "Preserve temporal alignment"
+  },
+  {
+    "feature_name": "EngTrq_raw",
+    "source_columns": [
+      "EngTrq"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "N*m",
+    "causal": true,
+    "justification": "Current EngTrq measurement"
+  },
+  {
+    "feature_name": "EngTrq_ma",
+    "source_columns": [
+      "EngTrq"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "N*m",
+    "causal": true,
+    "justification": "Recent average EngTrq (smoothed)"
+  },
+  {
+    "feature_name": "EngTrq_std",
+    "source_columns": [
+      "EngTrq"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "N*m",
+    "causal": true,
+    "justification": "EngTrq variability/stability indicator"
+  },
+  {
+    "feature_name": "RPM_raw",
+    "source_columns": [
+      "RPM"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "rpm",
+    "causal": true,
+    "justification": "Current RPM measurement"
+  },
+  {
+    "feature_name": "RPM_ma",
+    "source_columns": [
+      "RPM"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "rpm",
+    "causal": true,
+    "justification": "Recent average RPM (smoothed)"
+  },
+  {
+    "feature_name": "RPM_std",
+    "source_columns": [
+      "RPM"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "rpm",
+    "causal": true,
+    "justification": "RPM variability/stability indicator"
+  },
+  {
+    "feature_name": "MAP_raw",
+    "source_columns": [
+      "MAP"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "Pa abs",
+    "causal": true,
+    "justification": "Current MAP measurement"
+  },
+  {
+    "feature_name": "MAP_ma",
+    "source_columns": [
+      "MAP"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "Pa abs",
+    "causal": true,
+    "justification": "Recent average MAP (smoothed)"
+  },
+  {
+    "feature_name": "MAP_std",
+    "source_columns": [
+      "MAP"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "Pa abs",
+    "causal": true,
+    "justification": "MAP variability/stability indicator"
+  },
+  {
+    "feature_name": "EGT_raw",
+    "source_columns": [
+      "EGT"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "K",
+    "causal": true,
+    "justification": "Current EGT measurement"
+  },
+  {
+    "feature_name": "EGT_ma",
+    "source_columns": [
+      "EGT"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "K",
+    "causal": true,
+    "justification": "Recent average EGT (smoothed)"
+  },
+  {
+    "feature_name": "EGT_std",
+    "source_columns": [
+      "EGT"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "K",
+    "causal": true,
+    "justification": "EGT variability/stability indicator"
+  },
+  {
+    "feature_name": "FuelFlow_raw",
+    "source_columns": [
+      "FuelFlow"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "kg/s (inferred)",
+    "causal": true,
+    "justification": "Current FuelFlow measurement"
+  },
+  {
+    "feature_name": "FuelFlow_ma",
+    "source_columns": [
+      "FuelFlow"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "kg/s (inferred)",
+    "causal": true,
+    "justification": "Recent average FuelFlow (smoothed)"
+  },
+  {
+    "feature_name": "FuelFlow_std",
+    "source_columns": [
+      "FuelFlow"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "kg/s (inferred)",
+    "causal": true,
+    "justification": "FuelFlow variability/stability indicator"
+  },
+  {
+    "feature_name": "OilPress_raw",
+    "source_columns": [
+      "OilPress"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "Pa abs",
+    "causal": true,
+    "justification": "Current OilPress measurement"
+  },
+  {
+    "feature_name": "OilPress_ma",
+    "source_columns": [
+      "OilPress"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "Pa abs",
+    "causal": true,
+    "justification": "Recent average OilPress (smoothed)"
+  },
+  {
+    "feature_name": "OilPress_std",
+    "source_columns": [
+      "OilPress"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "Pa abs",
+    "causal": true,
+    "justification": "OilPress variability/stability indicator"
+  },
+  {
+    "feature_name": "BusVoltage_raw",
+    "source_columns": [
+      "BusVoltage"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "V",
+    "causal": true,
+    "justification": "Current BusVoltage measurement"
+  },
+  {
+    "feature_name": "BusVoltage_ma",
+    "source_columns": [
+      "BusVoltage"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "V",
+    "causal": true,
+    "justification": "Recent average BusVoltage (smoothed)"
+  },
+  {
+    "feature_name": "BusVoltage_std",
+    "source_columns": [
+      "BusVoltage"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "V",
+    "causal": true,
+    "justification": "BusVoltage variability/stability indicator"
+  },
+  {
+    "feature_name": "Vib1X_raw",
+    "source_columns": [
+      "Vib1X"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "Current Vib1X measurement"
+  },
+  {
+    "feature_name": "Vib1X_ma",
+    "source_columns": [
+      "Vib1X"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "Recent average Vib1X (smoothed)"
+  },
+  {
+    "feature_name": "Vib1X_std",
+    "source_columns": [
+      "Vib1X"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "Vib1X variability/stability indicator"
+  },
+  {
+    "feature_name": "VibRMS_raw",
+    "source_columns": [
+      "VibRMS"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "Current VibRMS measurement"
+  },
+  {
+    "feature_name": "VibRMS_ma",
+    "source_columns": [
+      "VibRMS"
+    ],
+    "calculation": "Trailing mean over 50 samples",
+    "window_size": 50,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "Recent average VibRMS (smoothed)"
+  },
+  {
+    "feature_name": "VibRMS_std",
+    "source_columns": [
+      "VibRMS"
+    ],
+    "calculation": "Trailing std deviation over 50 samples",
+    "window_size": 50,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "VibRMS variability/stability indicator"
+  },
+  {
+    "feature_name": "EngTrq_rate",
+    "source_columns": [
+      "EngTrq"
+    ],
+    "calculation": "Backward difference: value[t] - value[t-1]",
+    "window_size": 1,
+    "units": "N*m/sample",
+    "causal": true,
+    "justification": "EngTrq rate of change (transient detection)"
+  },
+  {
+    "feature_name": "RPM_rate",
+    "source_columns": [
+      "RPM"
+    ],
+    "calculation": "Backward difference: value[t] - value[t-1]",
+    "window_size": 1,
+    "units": "rpm/sample",
+    "causal": true,
+    "justification": "RPM rate of change (transient detection)"
+  },
+  {
+    "feature_name": "EGT_rate",
+    "source_columns": [
+      "EGT"
+    ],
+    "calculation": "Backward difference: value[t] - value[t-1]",
+    "window_size": 1,
+    "units": "K/sample",
+    "causal": true,
+    "justification": "EGT rate of change (transient detection)"
+  },
+  {
+    "feature_name": "TPS_raw",
+    "source_columns": [
+      "TPS"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "% (inferred)",
+    "causal": true,
+    "justification": "Current TPS measurement"
+  },
+  {
+    "feature_name": "TPS_rate",
+    "source_columns": [
+      "TPS"
+    ],
+    "calculation": "Backward difference: value[t] - value[t-1]",
+    "window_size": 1,
+    "units": "% (inferred)/sample",
+    "causal": true,
+    "justification": "TPS rate of change (transient detection)"
+  },
+  {
+    "feature_name": "MAT_raw",
+    "source_columns": [
+      "MAT"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "K",
+    "causal": true,
+    "justification": "Current MAT measurement"
+  },
+  {
+    "feature_name": "CH_raw",
+    "source_columns": [
+      "CH"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "K",
+    "causal": true,
+    "justification": "Current CH measurement"
+  },
+  {
+    "feature_name": "TurboSpd_raw",
+    "source_columns": [
+      "TurboSpd"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "rad/s",
+    "causal": true,
+    "justification": "Current TurboSpd measurement"
+  },
+  {
+    "feature_name": "OilTemp_raw",
+    "source_columns": [
+      "OilTemp"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "K",
+    "causal": true,
+    "justification": "Current OilTemp measurement"
+  },
+  {
+    "feature_name": "AltCurrent_raw",
+    "source_columns": [
+      "AltCurrent"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "A",
+    "causal": true,
+    "justification": "Current AltCurrent measurement"
+  },
+  {
+    "feature_name": "InjTiming_raw",
+    "source_columns": [
+      "InjTiming"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "deg crank angle",
+    "causal": true,
+    "justification": "Current InjTiming measurement"
+  },
+  {
+    "feature_name": "Vib0p5X_raw",
+    "source_columns": [
+      "Vib0p5X"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "Current Vib0p5X measurement"
+  },
+  {
+    "feature_name": "Vib2X_raw",
+    "source_columns": [
+      "Vib2X"
+    ],
+    "calculation": "Direct value",
+    "window_size": null,
+    "units": "g (estimate)",
+    "causal": true,
+    "justification": "Current Vib2X measurement"
+  }
+]

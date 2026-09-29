@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Development artifacts  
+_*.py
+temp*/
+
+# Outputs (generated data)
+data/processed/
+data/features/
+data/sequences/
+data/inference/
+outputs/*.csv
+outputs/*.png
+outputs/*.json
+
+# EXCEPTION: anomaly_detection_report.json holds the calibrated threshold
+# (currently 0.146577) and is loaded directly by `run_pipeline.py --mode
+# inference` and phase5_anomaly_detection/run_inference.py. It is NOT
+# regenerable without re-running --mode detect, which retrains the model --
+# so it must be committed, unlike the other generated outputs/*.json files.
+!outputs/anomaly_detection_report.json
+
+# EXCEPTION: Validation/proof artifacts referenced in project reports, not
+# regenerable without retraining:
+!outputs/anomaly_attribution.csv
+!outputs/threshold_bootstrap_ci.json
+!outputs/fault_injection_validation.csv
+!outputs/noise_sweep.csv
+!outputs/trend_analysis.json
+
+# Keep structure files
+!outputs/.gitkeep
+!data/raw/.gitkeep
+
+# Reports (development documentation)
+*_REPORT.txt
+*_VERIFICATION.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
