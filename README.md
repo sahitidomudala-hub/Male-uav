@@ -198,6 +198,4 @@ Inference scratch files go to `data/inference/`, so scoring a new file never ove
 - Timestamps are mission-elapsed seconds, not UTC. Inference works on files; live streaming ingestion and
   on-board latency/memory profiling are not yet done.
 
-## License
 
-[MIT](LICENSE)
