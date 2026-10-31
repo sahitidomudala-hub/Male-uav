@@ -419,8 +419,8 @@ def train_autoencoder(sequences_dir: str,
     
     # Train
     print("\n[4/7] Training model...")
-    # Use separate filename for 40-feature model to preserve 24-feature original
-    model_filename = f'lstm_autoencoder_{n_features}f.keras'  # e.g., lstm_autoencoder_40f.keras
+    # Canonical filename: this is what inference and Phase 5 load.
+    model_filename = 'lstm_autoencoder.keras'
     model_path = output_dir / 'models' / model_filename
     model_path.parent.mkdir(parents=True, exist_ok=True)
     print(f"  Model will be saved as: {model_filename}")
@@ -439,7 +439,7 @@ def train_autoencoder(sequences_dir: str,
     
     # Save training history using csv module
     print("\n[6/7] Saving training history...")
-    history_path = output_dir / 'outputs' / f'training_history_{n_features}f.csv'
+    history_path = output_dir / 'outputs' / 'training_history.csv'
     history_path.parent.mkdir(parents=True, exist_ok=True)
     
     # Get all keys from history dict
@@ -463,7 +463,7 @@ def train_autoencoder(sequences_dir: str,
     # Validation errors
     print("  Computing validation reconstruction errors...")
     val_errors = autoencoder.calculate_reconstruction_errors(X_val)
-    val_errors_path = output_dir / 'outputs' / f'reconstruction_errors_val_{n_features}f.csv'
+    val_errors_path = output_dir / 'outputs' / 'reconstruction_errors_val.csv'
     
     with open(val_errors_path, 'w', newline='') as f:
         writer = csv.writer(f)
@@ -480,7 +480,7 @@ def train_autoencoder(sequences_dir: str,
     # Test errors (for later Phase 5 use - NOT for training/tuning)
     print("\n  Computing test reconstruction errors...")
     test_errors = autoencoder.calculate_reconstruction_errors(X_test)
-    test_errors_path = output_dir / 'outputs' / f'reconstruction_errors_test_{n_features}f.csv'
+    test_errors_path = output_dir / 'outputs' / 'reconstruction_errors_test.csv'
     
     with open(test_errors_path, 'w', newline='') as f:
         writer = csv.writer(f)
@@ -528,11 +528,11 @@ def train_autoencoder(sequences_dir: str,
         'test_data_used_for_training': False,
         'synthetic_data_generated': False,
         'keras_backend': keras.backend.backend(),
-        'model_file': str(model_path),
-        'training_history_file': str(history_path),
-        'val_errors_file': str(val_errors_path),
-        'test_errors_file': str(test_errors_path),
-        'phase3_metadata_file': str(metadata_path)
+        'model_file': Path(model_path).as_posix(),
+        'training_history_file': Path(history_path).as_posix(),
+        'val_errors_file': Path(val_errors_path).as_posix(),
+        'test_errors_file': Path(test_errors_path).as_posix(),
+        'phase3_metadata_file': Path(metadata_path).as_posix()
     }
     
     # Save metadata with feature-specific filename

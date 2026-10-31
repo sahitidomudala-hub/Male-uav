@@ -340,9 +340,14 @@ class SequencePreparator:
             pickle.dump(self.scaler, f)
         print(f"  ✓ Scaler: {scaler_path}")
         
-        # Compute and save training envelope (Task 1a)
+        # Optional: training envelope (per-channel operating range on TRAINING rows).
+        # Not consumed by inference; skipped when the module is not present.
+        try:
+            import training_envelope as te
+        except ImportError:
+            print("\n  (training_envelope module not found -- envelope step skipped; not needed for inference)")
+            return
         print("\nComputing training envelope from TRAINING rows...")
-        import training_envelope as te
         # Reconstruct cleaned_telemetry path from features path
         features_path = Path(self.metadata['input_file'])
         cleaned_path = features_path.parent.parent / 'processed' / 'cleaned_telemetry.csv'

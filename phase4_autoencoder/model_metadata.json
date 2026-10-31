@@ -23,9 +23,9 @@
   "test_data_used_for_training": false,
   "synthetic_data_generated": false,
   "keras_backend": "tensorflow",
-  "model_file": "models\\lstm_autoencoder_40f.keras",
-  "training_history_file": "outputs\\training_history_40f.csv",
-  "val_errors_file": "outputs\\reconstruction_errors_val_40f.csv",
-  "test_errors_file": "outputs\\reconstruction_errors_test_40f.csv",
-  "phase3_metadata_file": "data\\sequences\\metadata.json"
+  "model_file": "models/lstm_autoencoder.keras",
+  "training_history_file": "outputs/training_history.csv",
+  "val_errors_file": "outputs/reconstruction_errors_val.csv",
+  "test_errors_file": "outputs/reconstruction_errors_test.csv",
+  "phase3_metadata_file": "data/sequences/metadata.json"
 }

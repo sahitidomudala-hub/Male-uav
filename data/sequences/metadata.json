@@ -1,0 +1,109 @@
+{
+  "input_file": "data/features/extracted_features.csv",
+  "total_rows": 53621,
+  "num_features": 40,
+  "feature_names": [
+    "EngTrq_raw",
+    "EngTrq_ma",
+    "EngTrq_std",
+    "RPM_raw",
+    "RPM_ma",
+    "RPM_std",
+    "MAP_raw",
+    "MAP_ma",
+    "MAP_std",
+    "EGT_raw",
+    "EGT_ma",
+    "EGT_std",
+    "FuelFlow_raw",
+    "FuelFlow_ma",
+    "FuelFlow_std",
+    "OilPress_raw",
+    "OilPress_ma",
+    "OilPress_std",
+    "BusVoltage_raw",
+    "BusVoltage_ma",
+    "BusVoltage_std",
+    "Vib1X_raw",
+    "Vib1X_ma",
+    "Vib1X_std",
+    "VibRMS_raw",
+    "VibRMS_ma",
+    "VibRMS_std",
+    "EngTrq_rate",
+    "RPM_rate",
+    "EGT_rate",
+    "TPS_raw",
+    "TPS_rate",
+    "MAT_raw",
+    "CH_raw",
+    "TurboSpd_raw",
+    "OilTemp_raw",
+    "AltCurrent_raw",
+    "InjTiming_raw",
+    "Vib0p5X_raw",
+    "Vib2X_raw"
+  ],
+  "sequence_length": 50,
+  "stride": 1,
+  "sampling_rate_hz": 50.000000000045475,
+  "model_input_channels": [
+    "EngTrq",
+    "RPM",
+    "MAT",
+    "MAP",
+    "EGT",
+    "FuelFlow",
+    "CH",
+    "TurboSpd",
+    "TPS",
+    "OilPress",
+    "OilTemp",
+    "AltCurrent",
+    "BusVoltage",
+    "InjTiming",
+    "Vib0p5X",
+    "Vib1X",
+    "Vib2X",
+    "VibRMS"
+  ],
+  "passthrough_channels": [
+    "BaroPress",
+    "Altitude"
+  ],
+  "expected_feature_count": 40,
+  "config_fingerprint": "4eaa37adf4c2331e080472d0b37e86ade95b66d9733ac1c20abefab394fbb138",
+  "warmup_rows_removed": 1,
+  "clean_rows": 53620,
+  "train_rows": 37534,
+  "val_rows": 8043,
+  "test_rows": 8043,
+  "train_time_range": [
+    0.02,
+    750.68
+  ],
+  "val_time_range": [
+    750.7,
+    911.54
+  ],
+  "test_time_range": [
+    911.56,
+    1072.4
+  ],
+  "redundant_groups": [
+    [
+      "FuelFlow",
+      "InjTiming"
+    ],
+    [
+      "Vib0p5X",
+      "Vib2X"
+    ]
+  ],
+  "redundancy_cutoff": 0.9999,
+  "scaler_type": "StandardScaler",
+  "scaler_fitted_on": "training_data_only",
+  "train_sequences": 37485,
+  "validation_sequences": 7994,
+  "test_sequences": 7994
+}

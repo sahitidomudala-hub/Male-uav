@@ -8,21 +8,24 @@ __pycache__/
 dist/
 build/
 
-# Development artifacts  
+# Development artifacts
 _*.py
 temp*/
 
 # Outputs (generated data)
 data/processed/
 data/features/
-data/sequences/
+data/sequences/*
+# EXCEPTION: Phase 3 metadata (feature order, sequence length, sampling rate,
+# config fingerprint) is required by `--mode inference` and the schema guard.
+!data/sequences/metadata.json
 data/inference/
 outputs/*.csv
 outputs/*.png
 outputs/*.json
 
 # EXCEPTION: anomaly_detection_report.json holds the calibrated threshold
-# (currently 0.146577) and is loaded directly by `run_pipeline.py --mode
+# (see README) and is loaded directly by `run_pipeline.py --mode
 # inference` and phase5_anomaly_detection/run_inference.py. It is NOT
 # regenerable without re-running --mode detect, which retrains the model --
 # so it must be committed, unlike the other generated outputs/*.json files.
@@ -49,3 +52,7 @@ outputs/*.json
 .idea/
 *.swp
 *.swo
+
+# Virtual environments
+.venv/
+venv/

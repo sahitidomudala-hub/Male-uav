@@ -1,0 +1,10 @@
+# Tested with Python 3.11-3.13. Versions match those used to train the committed model.
+tensorflow>=2.21,<2.22
+keras>=3.15,<4
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+# Pinned: models/feature_scaler.pkl was pickled with this version
+scikit-learn==1.9.1
+matplotlib>=3.8
+seaborn>=0.13

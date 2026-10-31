@@ -16,4 +16,4 @@ Key artifacts: `models/lstm_autoencoder.keras`, `models/feature_scaler.pkl`, `mo
 `data/sequences/metadata.json`, `outputs/anomaly_detection_report.json` (threshold).
 
 Errors of the form "RETRAIN REQUIRED" come from `schema_guard.py`: config and trained artifacts disagree.
-Use the project venv (`.venv\Scripts\python.exe`) with `KERAS_BACKEND=tensorflow`.
+Setup: `pip install -r requirements.txt` (inside a virtual environment). The scripts select the TensorFlow Keras backend themselves.
